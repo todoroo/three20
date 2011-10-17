@@ -61,4 +61,6 @@
 
 - (BOOL)shouldUpdate:(BOOL)emptyText;
 
+- (BOOL) hasSearchResults; // (AS) 09/23 so we don't get warnings from subclassing it
+
 @end

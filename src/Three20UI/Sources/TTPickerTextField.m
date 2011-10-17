@@ -510,8 +510,11 @@ static const CGFloat kMinCursorWidth  = 50.0f;
 - (void)scrollToEditingLine:(BOOL)animated {
   UIScrollView* scrollView = (UIScrollView*)[self ancestorOrSelfWithClass:[UIScrollView class]];
   if (scrollView) {
-    CGFloat offset = _lineCount == 1 ? 0 : [self topOfLine:_lineCount-1];
+      CGFloat offset = _lineCount == 1 ? 0 : [self topOfLine:_lineCount-1];
+      NSLog(@"Scrollview content offset: %f", scrollView.contentOffset.y);
     [scrollView setContentOffset:CGPointMake(0, self.top+offset) animated:animated];
+      NSLog(@"The offset is : %f", offset);
+      NSLog(@"Scrollview content offset: %f", scrollView.contentOffset.y);
   }
 }
 
