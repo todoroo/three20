@@ -153,6 +153,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)tableView:(UITableView*)tableView objectForRowAtIndexPath:(NSIndexPath*)indexPath {
+    //NSLog(@"Section count: %d", [_sections count]);
   if (_sections) {
     NSArray* section = [_items objectAtIndex:indexPath.section];
     return [section objectAtIndex:indexPath.row];

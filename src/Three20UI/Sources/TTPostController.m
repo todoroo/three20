@@ -288,12 +288,13 @@ static const CGFloat kMarginY = 6.0f;
   _textView.font = TTSTYLEVAR(font);
   _textView.textColor = [UIColor blackColor];
   _textView.contentInset = UIEdgeInsetsMake(0, 4, 0, 4);
-  _textView.keyboardAppearance = UIKeyboardAppearanceAlert;
+  _textView.keyboardAppearance = UIKeyboardAppearanceDefault;
   _textView.backgroundColor = [UIColor clearColor];
   [self.view addSubview:_textView];
 
   _navigationBar = [[UINavigationBar alloc] init];
-  _navigationBar.barStyle = UIBarStyleBlackOpaque;
+  _navigationBar.barStyle = UIBarStyleDefault;
+  //_navigationBar.tintColor = [UIColor colorWithRed: green:<#(CGFloat)#> blue:<#(CGFloat)#> alpha:<#(CGFloat)#>
   _navigationBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
   [_navigationBar pushNavigationItem:self.navigationItem animated:NO];
   [_innerView addSubview:_navigationBar];

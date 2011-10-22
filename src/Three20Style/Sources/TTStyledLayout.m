@@ -447,16 +447,16 @@
     }
   }
   if (!font) {
-    if ([elt isKindOfClass:[TTStyledLinkNode class]]
-        || [elt isKindOfClass:[TTStyledBoldNode class]]) {
-      font = self.boldFont;
-
-    } else if ([elt isKindOfClass:[TTStyledItalicNode class]]) {
-      font = self.italicFont;
-
-    } else {
+//    if ([elt isKindOfClass:[TTStyledLinkNode class]]
+//        || [elt isKindOfClass:[TTStyledBoldNode class]]) {
+//      font = self.boldFont;
+//
+//    } else if ([elt isKindOfClass:[TTStyledItalicNode class]]) {
+//      font = self.italicFont;
+//
+//    } else {
       font = self.font;
-    }
+//    }
   }
 
   UIFont* lastFont = _font;
@@ -623,8 +623,8 @@
     ? [[TTStyleSheet globalStyleSheet] styleWithSelector:imageNode.className] : nil;
   TTBoxStyle* padding = style ? [style firstStyleOfClass:[TTBoxStyle class]] : nil;
 
-  CGFloat imageWidth = imageNode.width ? imageNode.width : image.size.width;
-  CGFloat imageHeight = imageNode.height ? imageNode.height : image.size.height;
+    CGFloat imageWidth = imageNode.width ? imageNode.width : image ? image.size.width : 0;
+    CGFloat imageHeight = imageNode.height ? imageNode.height : image ? image.size.height : 0;
   CGFloat contentWidth = imageWidth;
   CGFloat contentHeight = imageHeight;
 
@@ -818,7 +818,6 @@
                       sizeWithFont:_font].width;
         [self addFrameForText:line element:element node:textNode width:frameWidth
               height:[_font ttLineHeight]];
-        frameWidth = 0;
       }
     }
   }
