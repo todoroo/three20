@@ -66,6 +66,8 @@
  */
 - (void)dismissWithResult:(id)result animated:(BOOL)animated;
 
+- (void)dismissWithCancel;
+
 /**
  * Notifies the user of an error and resets the editor to normal.
  */

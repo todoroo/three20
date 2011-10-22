@@ -89,4 +89,6 @@
  */
 @property (nonatomic, retain) TTStyledElement* highlightedNode;
 
+- (void)setHighlightedFrame:(TTStyledBoxFrame*)frame;
+
 @end

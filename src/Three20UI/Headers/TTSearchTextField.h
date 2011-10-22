@@ -55,6 +55,8 @@
 
 - (void)showSearchResults:(BOOL)show;
 
+- (BOOL)hasSearchResults;
+
 - (UIView*)superviewForSearchResults;
 
 - (CGRect)rectForSearchResults:(BOOL)withKeyboard;
