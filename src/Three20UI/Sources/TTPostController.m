@@ -61,7 +61,8 @@ static const CGFloat kMarginY = 6.0f;
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     self.navigationItem.leftBarButtonItem =
-      [[[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel
+      [[[UIBarButtonItem alloc] initWithTitle: @"Back"
+                                        style: UIBarButtonItemStylePlain
                                                      target: self
                                                      action: @selector(cancel)] autorelease];
     self.navigationItem.rightBarButtonItem =
