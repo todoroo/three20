@@ -122,7 +122,9 @@ static const NSInteger kLoadMaxRetries = 2;
   TTURLRequest* request = _requests.count == 1 ? [_requests objectAtIndex:0] : nil;
   NSURLRequest* URLRequest = [_queue createNSURLRequest:request URL:URL];
 
-  _connection = [[NSURLConnection alloc] initWithRequest:URLRequest delegate:self];
+    _connection = [[NSURLConnection alloc] initWithRequest:URLRequest delegate:self startImmediately:NO];
+    [_connection scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    [_connection start];
 }
 
 
