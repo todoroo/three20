@@ -571,7 +571,6 @@ static NSMutableDictionary* gNamedCaches = nil;
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)moveDataForURL:(NSString*)oldURL toURL:(NSString*)newURL {
   id image = [[self imageForURL:oldURL] retain];
-    //NSLog(@"Image address %@", image);
   if (image) {
     [_imageSortedList removeObject:oldURL];
     [_imageCache removeObjectForKey:oldURL];
