@@ -447,16 +447,16 @@
     }
   }
   if (!font) {
-    if ([elt isKindOfClass:[TTStyledLinkNode class]]
+  /*  if ([elt isKindOfClass:[TTStyledLinkNode class]]
         || [elt isKindOfClass:[TTStyledBoldNode class]]) {
       font = self.boldFont;
 
     } else if ([elt isKindOfClass:[TTStyledItalicNode class]]) {
       font = self.italicFont;
 
-    } else {
+    } else {*/
       font = self.font;
-    }
+//    }
   }
 
   UIFont* lastFont = _font;
