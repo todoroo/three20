@@ -66,6 +66,9 @@
  */
 - (void)dismissWithResult:(id)result animated:(BOOL)animated;
 
+// Added from astrid to disable warnings
+- (void)dismissWithCancel;
+
 /**
  * Notifies the user of an error and resets the editor to normal.
  */
